@@ -27,6 +27,11 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: "Barlow Condensed" "Bellefair" "Barlow" "sans-serif";
+}
+
+
 .space-body {
   background-image: url("../../images/space-bg.png");
   background-repeat: no-repeat;
@@ -76,6 +81,18 @@
   padding: 0 20px;
 }
 
+.moon-body {
+  background-image: url("../../images/moon-bg.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.moon-header {
+  padding: 40px 0px;
+  padding-left: 55px;
+}
+
+.moon {
 .space-header {
   padding: 40px;
 }
@@ -87,21 +104,40 @@
 }
 
 .space {
+
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 0px;
 }
 
+
+.moon__hr {
+  width: 473px;
+  height: 1px;
+  background-color: #FFFFFF;
+}
+
+.moon__list {
+  width: 830px;
+  height: 96px;
+  padding: 0px 123px 0px 165px;
+
 .space-logo {
   margin-right: 64px;
 }
 
 .space_list {
+
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 48px;
+
+  background: rgba(255, 255, 255, 0.0392156863);
+}
+
+.moon__item {
   background-color: rgba(255, 255, 255, 0.0392156863);
   width: 830px;
   height: 96px;
@@ -109,27 +145,57 @@
 }
 
 .space__item {
+
   position: relative;
   overflow: hidden;
 }
 
+ Abduvali
+.moon__item::before {
+
 .space__item::before {
+
   content: "";
   width: 50%;
   height: 3px;
   position: absolute;
   background-color: white;
+
+  left: -100px;
+  bottom: 0px;
+  transition: all 0.3s linear;
+}
+
+.moon__item::after {
+
   left: -100%;
   bottom: 0;
   transition: all 0.3s linear;
 }
 
 .space__item::after {
+
   content: "";
   width: 50%;
   height: 3px;
   position: absolute;
   background-color: white;
+
+  right: -100px;
+  bottom: 0px;
+  transition: all 0.3s linear;
+}
+
+.moon__item:hover::before {
+  left: 0;
+}
+
+.moon__item:hover::after {
+  right: 0;
+}
+
+.moon__item:active::before, .moon__item:active::after {
+
   right: -100%;
   bottom: 0;
   transition: all 0.3s linear;
@@ -144,9 +210,15 @@
 }
 
 .space__item:active::before, .space__item:active::after {
+
   width: 0;
   height: 0;
 }
+
+.moon__header-link {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.2px;
 
 .space__link {
   margin-bottom: 0px;
@@ -155,10 +227,113 @@
   color: white;
   line-height: 19.2px;
   text-transform: uppercase;
+
   display: inline-block;
   overflow: hidden;
   position: relative;
   margin-bottom: 20px;
+
+  color: white;
+}
+
+.moon-section {
+  padding: 76px 0;
+}
+
+.moon__1 {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 206px;
+}
+
+.moon__text {
+  font-family: Barlow Condense;
+  margin-bottom: 64px;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 33.6px;
+  color: #FFFFFF;
+}
+
+.moon__hero-span {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 33.6px;
+  color: #FFFFFF;
+  opacity: 25%;
+}
+
+.moon__hero-img {
+  border: none;
+}
+
+.moon__hero-list {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 35px;
+  margin-bottom: 52px;
+}
+
+.moon__hero-item {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.2px;
+}
+
+.moon__hero-link {
+  color: white;
+}
+.moon__hero-link:hover {
+  color: orange;
+}
+
+.moon__hero-title {
+  margin-bottom: 14px;
+  font-size: 100px;
+  font-weight: 400;
+  line-height: 114.6px;
+  color: #FFFFFF;
+}
+
+.moon__hero-text {
+  margin-bottom: 54px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+  color: #D0D6F9;
+}
+
+.hero__wrapper-buy {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 110px;
+}
+
+.hero__moon-title {
+  margin-top: 28px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.8px;
+  color: #D0D6F9;
+}
+
+.hero__wrapper-moon {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 79px;
+}
+
+.hero__moon-buy {
+  margin-top: 12px;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 32.09px;
+  color: #FFFFFF;
+
   font-family: "Barlow Condensed", sans-serif;
 }
 
@@ -389,4 +564,5 @@
     letter-spacing: 1.25px;
     margin-bottom: 48px;
   }
+
 }/*# sourceMappingURL=main.css.map */
