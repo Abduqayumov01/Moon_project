@@ -5,7 +5,38 @@
     text-decoration: none;
     box-sizing: border-box;
 }
+ Abduvali
 
 body{
     font-family: "Barlow Condensed" "Bellefair" "Barlow" "sans-serif";
 }
+
+.space-body{
+    background-image: url("../../images/space-bg.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Bellefair'sans-serif;
+    font-family: 'Barlow', sans-serif;
+}
+@media (max-width:768px){
+    .space-body{
+        background-image: url(../../images/tablet-bg.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        font-family: 'Barlow Condensed', sans-serif;
+        font-family: 'Bellefair'sans-serif;
+        font-family: 'Barlow', sans-serif;
+    }
+}
+@media (max-width:375px){
+    .space-body{
+        background-image: url(../images/space-mobile-bg.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        font-family: 'Barlow Condensed', sans-serif;
+        font-family: 'Bellefair'sans-serif;
+        font-family: 'Barlow', sans-serif;
+    }
+}
+ main
