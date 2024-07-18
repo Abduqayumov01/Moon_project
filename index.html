@@ -3,27 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="icon" href="Site Icon Link"> -->
+    <link rel="icon" href="./images/site-logo.svg">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/main.css">
-    <title>Site Title</title>
+    <title>Space</title>
 </head>
-<body>
-    <header class="space-header">
-        <div class="container">
-            <div class="space"></div>
-        </div>
+<body class="space-body">
+    <header data-aos="flip-down" class="space-header">
+            <div class="space">
+                <img class="space-logo" src="./images/site-logo.svg" alt="site-logo" width="48" height="48">
+                <hr class="space__border">
+                <ul class="space_list">
+                    <li class="space__item">
+                        <a href="/" class="space__link"> 00  HOME</a>
+                    </li>
+                    <li class="space__item">
+                        <a href="./moon.html" class="space__link"> 01  DESTINATION</a>
+                    </li>
+                    <li class="space__item">
+                        <a href="./commander.html" class="space__link"> 02  CREW</a>
+                    </li>
+                    <li class="space__item">
+                        <a href="/launch.html" class="space__link"> 03  TECHNOLOGY</a>
+                    </li>
+                </ul>
+                <a href="/">
+                    <img src="./images/hamburger-icon.svg" alt="menu-img" class="space__menu-icon" width="24" height="21">
+                </a>
+            </div>
     </header>
     <main class="space-main">
         <section class="space-section">
             <div class="container">
-                <div class="hero"></div>
+                <div class="space__hero"> 
+                    <div data-aos="zoom-out-right" class="space__hero-content-wrapper">
+                        <span class="space__subtext"> SO, YOU WANT TO TRAVEL TO</span>
+                        <h1 class="space__hero-title"> SPACE</h1>
+                        <p class="space__hero-text"> Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!</p>
+                    </div>
+                    <button data-aos="zoom-out-left" class="space__btn"> EXPLORE</button>
+                </div>           
             </div>
         </section>
     </main>
-    <footer class="site-footer">
-        <div class="container">
-            <div class="footer"></div>
-        </div>
-    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
 </body>
 </html>

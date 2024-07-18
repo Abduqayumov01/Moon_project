@@ -1,0 +1,198 @@
+
+.space-header {
+    padding: 40px;
+}
+.space__border{
+    width: 473px;
+    height: 1px;
+    color: $white-clr;
+}
+.space {
+    @include Display($items:center, $space:space-between, $gap:0px);
+}
+.space-logo {
+    margin-right: 64px;
+}
+.space_list {
+    @include Display($items:center, $space:space-between, $gap:48px);
+    background-color: #FFFFFF0A;
+    width: 830px;
+    height: 96px;
+    padding: 50px;
+}
+.space__item{
+    position: relative;
+    overflow: hidden;
+}
+.space__item::before{
+    content: "";
+    width: 50%;
+    height: 3px;
+    position: absolute;
+    background-color: $white-clr;
+    left: -100%;
+    bottom: 0;
+    transition: all 0.3s linear;
+}
+.space__item::after{
+    content: "";
+    width: 50%;
+    height: 3px;
+    position: absolute;
+    background-color: $white-clr;
+    right: -100%;
+    bottom: 0;
+    transition: all 0.3s linear;
+}
+.space__item:hover::before{
+    left: 0;
+}
+.space__item:hover::after{
+    right: 0;
+}
+.space__item:active::before, .space__item:active::after{
+    width: 0;
+    height: 0;
+}
+.space__link {
+    @include textStyle($MB:0px, $FS:16px, $FW:400, $CLR:$white-clr, $LH:19.2px, $CASE:uppercase);
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 20px;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+.space__menu-icon{
+    display: none;
+}
+@media (max-width:768px){
+    .space {
+        @include Display($items:center, $space:space-between, $gap:0px);
+    }
+    .space__border{
+        display: none;
+    }
+    .space_list{ 
+        @include Display($items:center, $space:space-between, $gap:10px); 
+        background-color: #FFFFFF0A; 
+        width: 500px; 
+        height: 96px; 
+        padding: 0px; 
+    }
+    .space__link {
+        @include textStyle($MB:20px, $FS:14px, $FW:400, $CLR:$white-clr, $LH:16.8px, $CASE:uppercase); 
+    }
+    .space__menu-icon{
+        display: none;
+    }
+}
+@media (max-width:375px){
+    .space {
+        @include Display($items:center, $space:space-between, $gap:0px);
+    }
+    .space__menu-icon{
+        display: block;
+        border: none;
+    }
+    .space-logo{
+        width: 40px;
+        height: 40px;
+    }
+    .space_list{
+        display: none;
+    }
+}
+// Header end
+// Hero section start
+.space__hero{ 
+    @include  Display($items:center, $space:space-between, $gap:0px)
+}
+.space__border{
+    width: 400px;
+}
+.space__hero-content-wrapper {
+    width: 450px;
+}
+.space__subtext {
+    @include textStyle($MB:0px, $FS:28px, $FW:400, $CLR: $text-clr, $LH:33.6px, $CASE:uppercase); 
+    letter-spacing: 4.72px;
+    font-family: 'Barlow Condensed';
+}
+.space__hero-title {
+    @include textStyle($MB:0px, $FS:150px, $FW:400, $CLR:$white-clr, $LH:171.9px, $CASE:uppercase);
+    font-family: 'Bellefair', sans-serif; 
+}
+.space__hero-text {
+    @include textStyle($MB:0px, $FS:18px, $FW:400, $CLR:$text-clr, $LH:32px, $CASE:inherit);
+}
+.space__btn{
+    margin-top: 150px;
+    margin-bottom: 131px;
+    font-family: 'Bellefair', sans-serif;
+    height: 274px;
+    display: inline-block;
+    transition:  all 0.3s linear;
+    @include buttonStyle($BTN_W:274px, $BTN_PY:62px, $BTN_BG_CLR:$white-clr,$BTN_BR_Radius:50%, $BTN_Border_CLR:transparent,$BTN_FS:32px,$BTN_FW:400, $BTN_LH:36.37px, $BTN_CLR:$black-clr,$BTN_CASE:uppercase);
+    &:hover{
+        background-color: transparent;
+        color: $white-clr;
+        border-color: $white-clr;
+    }
+}
+@media (max-width:768px){
+    .space__hero{ 
+        @include  Display($items:center, $space:space-between, $gap:156px);
+        flex-direction: column;
+    }
+    .space__subtext {
+        @include textStyle($MB:0px, $FS:20px, $FW:400, $CLR: $text-clr, $LH:24px, $CASE:uppercase); 
+        letter-spacing: 3.38px;
+        font-family: 'Barlow Condensed';
+    }
+    .space__hero-title {
+        @include textStyle($MB:0px, $FS:150px, $FW:400, $CLR:$white-clr, $LH:150px, $CASE:uppercase);
+        font-family: 'Bellefair', sans-serif; 
+    }
+    .space__hero-text {
+        @include textStyle($MB:0px, $FS:16px, $FW:400, $CLR:$text-clr, $LH:28px, $CASE:inherit);
+    }
+    .space__btn{
+        width: 242px;
+        height: 242px;
+        letter-spacing: 2px;
+        margin-bottom: 90px;
+    }
+    .space__hero-content-wrapper {
+        width: 450px;
+        text-align: center;
+    }
+}
+@media (max-width:375px){
+    .space__hero{ 
+        @include  Display($items:center, $space:start, $gap:0px);
+        flex-direction: column;
+    }
+    .space__hero-content-wrapper {
+        width: 327px;
+        text-align: center;
+        gap: 16px;
+    }
+    .space__subtext {
+        @include textStyle($MB:0px, $FS:16px, $FW:400, $CLR: $text-clr, $LH:19.2px, $CASE:uppercase); 
+        letter-spacing: 3.38px;
+        font-family: 'Barlow Condensed';
+    }
+    .space__hero-title {
+        @include textStyle($MB:0px, $FS:80px, $FW:400, $CLR:$white-clr, $LH:100px, $CASE:uppercase);
+        font-family: 'Bellefair', sans-serif; 
+    }
+    .space__hero-text {
+        @include textStyle($MB:0px, $FS:15px, $FW:400, $CLR:$text-clr, $LH:25px, $CASE:inherit);
+    }
+    .space__btn{
+        height: 150px;
+        @include buttonStyle($BTN_W:150px, $BTN_PY:25px, $BTN_BG_CLR:$white-clr,$BTN_BR_Radius:50%, $BTN_Border_CLR:transparent,$BTN_FS:20px,$BTN_FW:400, $BTN_LH:22.92px, $BTN_CLR:$black-clr,$BTN_CASE:uppercase);
+        letter-spacing: 1.25px;
+        margin-bottom: 48px;
+    }
+}
